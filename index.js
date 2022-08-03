@@ -1,31 +1,31 @@
-const sec = document.getElementById("seconds");
-const minutes = document.getElementById("minutes");
-const hours = document.getElementById("hours");
+const miliseconds = document.getElementById("seconds");
+const seconds = document.getElementById("minutes");
+const minutes = document.getElementById("hours");
 var interval_id;
 
 const start_timer = () => {
-  let seconds = 0,
-    min = 0,
-    hrs = 0;
+  let mili = 0,
+    secs = 0,
+    mins = 0;
 
   interval_id = setInterval(() => {
-    seconds = seconds + 1;
-    sec.innerText = seconds;
-    if (seconds >= 60) {
-      seconds = 0;
-      min = min + 1;
-      minutes.innerText = min;
-    } else if (min >= 60) {
-      min = 0;
-      hrs = hrs + 1;
-      hours.innerText = hrs;
+    mili = mili + 1;
+    miliseconds.innerText = mili;
+    if (mili >= 99) {
+      mili = 0;
+      secs = secs + 1;
+      seconds.innerText = secs;
+    } else if (secs >= 59) {
+      secs = 0;
+      mins = mins + 1;
+      minutes.innerText = mins;
     }
-  }, 1000);
+  }, 10);
 };
 
 const reset_timer = () => {
   clearInterval(interval_id);
-  sec.innerText = "00";
+  miliseconds.innerText = "00";
+  seconds.innerText = "00";
   minutes.innerText = "00";
-  hours.innerText = "00";
 };
