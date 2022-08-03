@@ -10,22 +10,22 @@ const start_timer = () => {
 
   interval_id = setInterval(() => {
     seconds = seconds + 1;
-    sec.value = seconds;
+    sec.innerText = seconds;
     if (seconds >= 60) {
       seconds = 0;
       min = min + 1;
-      minutes.value = min;
+      minutes.innerText = min;
     } else if (min >= 60) {
       min = 0;
       hrs = hrs + 1;
-      hours.value = hrs;
+      hours.innerText = hrs;
     }
   }, 1000);
 };
 
 const reset_timer = () => {
   clearInterval(interval_id);
-  sec.value = "00";
-  minutes.value = "00";
-  hours.value = "00";
+  sec.innerText = "00";
+  minutes.innerText = "00";
+  hours.innerText = "00";
 };

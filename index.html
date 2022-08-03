@@ -23,65 +23,82 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
+    <style>
+      body {
+        background-color: #2c3347;
+        color: #ffffff;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 200;
+
+        text-align: center;
+        line-height: 59px;
+
+        margin: 0;
+      }
+      button {
+        background-color: goldenrod !important;
+      }
+      .gold {
+        font-weight: 900;
+
+        color: #f2c94c;
+        text-shadow: 0 0 0px #fff, 0 0 50px #f2c94c;
+      }
+    </style>
   </head>
   <body>
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-4 offset-4 text-center d-flex">
+        <h1 class="text-center mb-5">
+          <span class="gold">GOLD</span> STOPWATCH
+        </h1>
+        <div
+          class="col-md-4 offset-4 d-flex border rounded-circle"
+          style="height: 400px"
+        >
           <div
-            style="width: 120px; height: 100px"
-            class="border border-dark d-grid justify-content-center align-items-center"
+            class="d-grid offset-2 justify-content-center align-items-center"
           >
             <div
               class="d-grid justify-content-center align-items-center"
               style="width: 80px; height: 70px"
             >
-              <div class="form-outline">
-                <input type="text" id="hours" class="form-control" value="00" />
-              </div>
+              <h1 id="hours">00</h1>
+
               hours
             </div>
           </div>
-          <div
-            style="width: 120px; height: 100px"
-            class="border border-dark d-grid justify-content-center align-items-center"
-          >
+          <div class="d-grid justify-content-center align-items-center">
             <div
               class="d-grid justify-content-center align-items-center"
               style="width: 80px; height: 70px"
             >
               <div class="form-outline">
-                <input
-                  type="text"
-                  id="minutes"
-                  class="form-control"
-                  value="00"
-                />
+                <h1 id="minutes">00</h1>
               </div>
               minutes
             </div>
           </div>
-          <div
-            style="width: 120px; height: 100px"
-            class="border border-dark d-grid justify-content-center align-items-center"
-          >
+          <div class="d-grid justify-content-center align-items-center">
             <div
               class="d-grid justify-content-center align-items-center"
               style="width: 80px; height: 70px"
             >
               <div class="form-outline">
-                <input
-                  type="text"
-                  id="seconds"
-                  class="form-control"
-                  value="00"
-                />
+                <h1 id="seconds">00</h1>
               </div>
               seconds
             </div>
           </div>
         </div>
-        <div class="col-md-6 offset-5 my-5">
+      </div>
+      <div class="row">
+        <div class="col-md-5 offset-5 my-5">
           <button type="button" class="btn" onclick="start_timer()">
             <i class="fa fa-play"></i>
           </button>
